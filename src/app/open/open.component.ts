@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Task } from '../shared/task';
+import { TaskService } from '../shared/taskService.service';
 
 @Component({
   selector: 'app-open',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class OpenComponent {
 
+  public tasks: Array<Task> = [];
+
+  
+  constructor(private taskService: TaskService) { 
+     this.tasks = taskService.getTasks(); 
+   }
+
+
 }
+
