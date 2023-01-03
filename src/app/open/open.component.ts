@@ -3,7 +3,7 @@ import { Task } from '../shared/task';
 import { TaskService } from '../shared/taskService.service';
 
 @Component({
-  selector: 'app-open',
+  selector: 'app-open', 
   templateUrl: './open.component.html',
   styleUrls: ['./open.component.css']
 })
@@ -16,6 +16,18 @@ export class OpenComponent {
      this.tasks = taskService.getTasks(); 
    }
 
+  public add(content: string):void{
+    //console.dir(event);
+    this.taskService.add(content);
+  }
+
+  public toggle(task: Task):void{
+    console.dir(event);
+    task.toggle();
+  }
+
 
 }
+
+
 

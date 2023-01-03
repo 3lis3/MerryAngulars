@@ -5,3 +5,16 @@ h1{
 body{
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.doorstreep{
+    text-decoration: line-through;
+    color: red;
+}   
+
+.bla{
+    color: green;
+}   
+
+bla{
+    color: green;
+}   

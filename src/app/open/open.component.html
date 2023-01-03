@@ -1,5 +1,14 @@
 <p>open works!</p>
-
 <div *ngFor="let task of tasks">
-    <p>{{task.getContent()}}: </p>
+        
+    <p [ngClass]="task.getStatus() === true ? 'text-decoration-line-through' :''"> {{task.getContent()}}  </p>
+    <input type="checkbox" 
+        [checked]="task.getStatus()" (change)="toggle(task); localeVariabeleTextArea.value=''+task.getStatus()">
+    <p><textarea #localeVariabeleTextArea  [textContent]="task.getStatus()"></textarea> </p>
+
+</div>
+
+<div>
+<input id="toDoInput" #localeVariabele type="text" placeholder="Write your to do-item here.">
+<button type="submit" (click)="add(localeVariabele.value); localeVariabele.value= ''" id="btn" class="btn btn-primary">Submit</button>
 </div>
