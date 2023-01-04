@@ -3,7 +3,6 @@
         
     <p [ngClass]="task.getStatus() === true ? 'text-decoration-line-through' :''"> {{task.getContent()}}  </p>
     <input type="checkbox" 
-        [checked]="task.getStatus()" (change)="toggle(task); localeVariabeleTextArea.value=''+task.getStatus()">
-    <p><textarea #localeVariabeleTextArea  [textContent]="task.getStatus()"></textarea> </p>
+        [checked]="task.getStatus()" (change)="toggle(task)">
 
 </div>
