@@ -1,13 +1,18 @@
-<p>open works!</p>
-<div *ngFor="let task of tasks">
+<div id="openImage">
+    <img id="santaOpen" src="../../assets/Images/SantaOpen.png" class=" mx-auto d-block rounded">
+</div>
+<div class="container p-5 my-5 border rounded toDoContainer">
+
+<div class="input-group px-3 py-5 my-5">
+    <input class="form-control" id="toDoInput" #localeVariabele type="text" placeholder="Write your to do-item here.">
+    <button class="btn btn-danger" type="submit" (click)="add(localeVariabele.value); localeVariabele.value= ''" id="btn">Submit</button>
+    </div>
+    
+<div id="toDoItem" class="form-check form-switch p-3 m-3 rounded text-danger h4 shadow-sm bg-white" *ngFor="let task of tasks">
         
-    <p [ngClass]="task.getStatus() === true ? 'text-decoration-line-through' :''"> {{task.getContent()}}  </p>
-    <input type="checkbox" 
-        [checked]="task.getStatus()" (change)="toggle(task)">
+    <p [ngClass]="task.getStatus() === true ? 'text-decoration-line-through' :''"> <input class="form-check-input form-check-danger ms-2 me-3" type="checkbox" 
+        [checked]="task.getStatus()" (change)="toggle(task)"> {{task.getContent()}}  </p>
+    
 
 </div>
-
-<div>
-<input id="toDoInput" #localeVariabele type="text" placeholder="Write your to do-item here.">
-<button type="submit" (click)="add(localeVariabele.value); localeVariabele.value= ''" id="btn" class="btn btn-primary">Submit</button>
 </div>

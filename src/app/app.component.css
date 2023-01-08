@@ -1,9 +1,17 @@
+/*font-family: 'Henny Penny', cursive;
+font-family: 'Shadows Into Light', cursive;*/
+.toDoContainer{
+    background-color: #F8F9FA;}
 h1{
-    font-family: 'Rubik Puddles', cursive;
+    /*font-family: 'Rubik Puddles', cursive;*/
+    font-family: 'Henny Penny', cursive;
     font-size: 6rem;
+    color: #E3504E;
 }
 body{
-    font-family: 'Nunito Sans', sans-serif;
+    /*font-family: 'Nunito Sans', sans-serif;*/
+    font-family: 'Shadows Into Light', cursive;
+    background-color:#C3D6C4 ;
 }
 
 .doorstreep{
@@ -18,3 +26,10 @@ body{
 bla{
     color: green;
 }   
+#outletColor{
+    background-color:#C3D6C4 ;
+
+}
+.navbar{
+    margin:0px;
+}
