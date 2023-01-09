@@ -9,6 +9,7 @@ import { TaskService } from '../shared/taskService.service';
 })
 export class OpenComponent {
 
+
   public tasks: Array<Task> = [];
 
   
@@ -25,6 +26,10 @@ export class OpenComponent {
     console.dir(event);
     task.toggle();
   }
+
+  public delete(i: number) {
+    this.tasks.splice(i,1)
+    }
 
 
 }

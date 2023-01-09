@@ -8,10 +8,11 @@
     <button class="btn btn-danger" type="submit" (click)="add(localeVariabele.value); localeVariabele.value= ''" id="btn">Submit</button>
     </div>
     
-<div id="toDoItem" class="form-check form-switch p-3 m-3 rounded text-danger h4 shadow-sm bg-white" *ngFor="let task of tasks">
+<div id="toDoItem" class="form-check form-switch p-3 m-3 rounded text-danger h4 shadow-sm bg-white" *ngFor="let task of tasks; let i =index">
         
     <p [ngClass]="task.getStatus() === true ? 'text-decoration-line-through' :''"> <input class="form-check-input form-check-danger ms-2 me-3" type="checkbox" 
-        [checked]="task.getStatus()" (change)="toggle(task)"> {{task.getContent()}}  </p>
+        [checked]="task.getStatus()" (change)="toggle(task)"> {{task.getContent()}} <button type="button" class="btn btn-outline-danger float-end" (click)="delete(i)">Remove</button>
+    </p>
     
 
 </div>

@@ -23,4 +23,8 @@ export class DoneComponent {
     console.dir(event);
     task.toggle();
   }
+
+  public delete(i: number) {
+    this.tasks.splice(i,1)
+    }
 }
